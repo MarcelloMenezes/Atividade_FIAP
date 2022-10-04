@@ -13,7 +13,12 @@
 
 </head>
 
-<body class="d-flex justify-content-center  align-items-center">
+<body>
+    <header class="d-flex justify-content-center mb-4 p-1" style="background-color: black">
+        <a href="../maps/index.html" style="color: white !important;">
+            Sextou!! Venha curtir no Pretto com o melhor trajeto!! Se beber, não dirija!!
+        </a>
+    </header>
     <main class="container-card flex-direction-column d-flex align-items-center">
         <div class="mb-50 d-flex  justify-content-between" style="width: 500px;">
             <div class="cursor-pointer flex-direction-column d-flex justify-content-center align-items-center"
@@ -22,12 +27,12 @@
                 <p>Acender a luz</p>
             </div>
             <div class="cursor-pointer flex-direction-column d-flex justify-content-center align-items-center"
-                onclick="possibilidadesUsuario('open')">
+                onclick="abrirModal('open')">
                 <img src="../../icons/Open.ico" alt="icon open">
                 <p>Abrir portão</p>
             </div>
             <div class="cursor-pointer flex-direction-column d-flex justify-content-center align-items-center"
-                onclick="possibilidadesUsuario('music')">
+                onclick="abrirModal('music')">
                 <img src="../../icons/Music.ico" alt="icon musica">
                 <p>Música Alexa</p>
             </div>
@@ -52,6 +57,22 @@
         <div class="alert alert-success hidden" role="alert"
             style="width: 400px; position:absolute; bottom: 20px; left: 20px;">
             <span class="textModal"></span>
+        </div>
+        <div class="modal card-modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title"></h5>
+                    </div>
+                    <div class="modal-body">
+                        <input class="d-flex justify-content-center modal-input" type="text">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success btn-modal" onclick="fecharModal()">Salvar</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal" onclick="fecharModal()">Fechar</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
     <script src="index.js"></script>
