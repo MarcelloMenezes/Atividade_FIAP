@@ -14,7 +14,8 @@
 
 <body>
     <header class="d-flex justify-content-center mb-4 p-1" style="background-color: black">
-        <a href="../maps/index.html" style="color: white !important;">
+        <img class="cursor-pointer" src="../../icons/Menu.png" onclick="abrirFecharModal()" />
+        <a href="../maps/index.html" style="color: white !important; margin-left: 20px;">
             Sextou!! Venha curtir no Pretto com o melhor trajeto!! Se beber, não dirija!!
         </a>
     </header>
@@ -58,7 +59,29 @@
                 <p>Configurações</p>
             </div>
         </div>
+        <div class="modal modal-profiles" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Escolha o perfil:</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"
+                            onclick="abrirFecharModal()">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="../../icons/Profiles.jpeg" />
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary">Selecionar</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal"
+                            onclick="abrirFecharModal()">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
+    <script src="index.js"></script>
 </body>
 
 </html>
