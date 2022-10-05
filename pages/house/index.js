@@ -31,6 +31,7 @@ function abrirModal(item) {
 
     let modalTitle = document.querySelector('.modal-title')
     let modalBody = document.querySelector('.modal-body')
+    let modalSpeak = document.querySelector('.btn-speak')
     let btnModal = document.querySelector('.btn-modal')
 
     modal.classList.remove('modal')
@@ -39,12 +40,19 @@ function abrirModal(item) {
     switch (item) {
         case 'music':
             modalTitle.innerHTML = `Digite nome da música ou do artista:`
-            btnModal.innerHTML = `Salvar`
+            modalSpeak.innerHTML = `Falar nome da música`
+            btnModal.innerHTML = `Tocar`
             break;
         case 'open':
             modalTitle.innerHTML = `200 metros da casa, deseja abrir o portão?`
             modalBody.classList.add('hidden')
+            modalSpeak.innerHTML = `Não`
             btnModal.innerHTML = `Sim`
+            break;
+        case 'ar':
+            modalTitle.innerHTML = `Deseja ligar ar-condicionado de qual cômodo:`
+            modalSpeak.innerHTML = `Falar cômodo`
+            btnModal.innerHTML = `Ligar`
             break;
 
         default:
